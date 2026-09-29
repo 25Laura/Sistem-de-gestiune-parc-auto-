@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FleetFlow - Gestiune Parc Auto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Sistem de Gestiune Parc Auto</h1>
+    <p>Gestionează vehiculele din parcul auto, starea lor și tipul de combustibil.</p>
+    <p class="app-count">3 vehicule, dintre care 2 active</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Adaugă vehicul</h2>
+      <form class="item-form">
+        <label>
+          Nume / Număr înmatriculare
+          <input type="text" name="titlu" placeholder="Ex: Dacia Logan (B 123 ABC)" required />
+        </label>
+        <label>
+          Tip combustibil
+          <select name="eticheta">
+            <option value="benzina">Benzină</option>
+            <option value="diesel">Diesel</option>
+            <option value="electric">Electric</option>
+          </select>
+        </label>
+        <button type="submit">Adaugă vehicul</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Vehiculele din parc</h2>
+      <!-- Când lista e goală: <p class="empty">Nu există niciun vehicul în parc.</p> -->
+      <ul class="item-list">
+        <li class="item-card">
+          <div>
+            <h3>Dacia Logan (B 101 ABC)</h3>
+            <span class="badge badge-benzina">Benzină</span>
+          </div>
+          <span class="status">În cursă</span>
+        </li>
+
+        <li class="item-card done">
+          <div>
+            <h3>Volvo FH16 (B 202 DEF)</h3>
+            <span class="badge badge-diesel">Diesel</span>
+          </div>
+          <span class="status">În service</span>
+        </li>
+
+        <li class="item-card">
+          <div>
+            <h3>Tesla Model 3 (B 303 GHI)</h3>
+            <span class="badge badge-electric">Electric</span>
+          </div>
+          <span class="status">În cursă</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">Proiect Tehnologii Web</footer>
+</body>
+</html>
