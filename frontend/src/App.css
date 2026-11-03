@@ -1,204 +1,346 @@
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #f3e8ff;
-  --card: #ffffff;
-  --text: #1f2933;
-  --muted: #6b7280;
-  --accent: #69138e;
-  --accent-dark: #4a0d66;
-  --accent-soft: #e9d5ff;
-  --border: #e9d5ff;
+    --deep-space: #1E1E24;
+    --surface-1: #26262D;
+    --surface-2: #2E2E36;
+    --surface-3: #36363F;
+    --accent: #FF6B6B;
+    --accent-light: #FF9B9B;
+    --accent-glow: rgba(255, 107, 107, 0.35);
+    --accent-soft: rgba(255, 107, 107, 0.08);
+    --accent-border: rgba(255, 107, 107, 0.25);
+    --text-primary: #EEEEF0;
+    --text-secondary: #8A8B9E;
+    --text-muted: #55566A;
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --green: #22C55E;
+    --amber: #F59E0B;
+    --rose: #F43F5E;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-pill: 100px;
+}
 
-  --badge-benzina: #ef4444;
-  --badge-diesel: #f59e0b;
-  --badge-electric: #10b981;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
+    font-family: 'Rajdhani', 'Eurostile', sans-serif; /* Aplicăm fontul de tip Eurostile / Rajdhani */
+    letter-spacing: 0.5px; /* Oferă un aspect aerisit și tehnic specific stilului Eurostile */
+    background-color: var(--deep-space);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .app-header {
-  background: var(--accent);
-  color: #ffffff;
-  text-align: center;
-  padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.logo-badge-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--surface-2);
+    padding: 8px 20px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-subtle);
+    margin-bottom: 4px;
+}
+
+.brand-logo-box {
+    width: 44px;
+    height: 44px; 
+    background: var(--accent);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.brand-logo-img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.brand-name {
+   font-weight: 700;
+    font-size: 16px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+.header-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
 }
 
 .app-header h1 {
-  margin: 0 0 8px 0;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase; /* Specific pentru Eurostile care arată excelent scris cu majuscule */
+    letter-spacing: 1.5px;
+    background: linear-gradient(135deg, #FFD4D4 0%, var(--accent) 60%, #FF9B9B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.app-header p {
-  margin: 4px 0;
+.hero-desc {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
 
-.app-count {
-  font-weight: 600;
-  opacity: 0.9;
+.stats-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: var(--accent-soft);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    border-radius: var(--radius-pill);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--accent-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 24px auto;
-  padding: 0 16px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  align-items: start;
+.badge-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
 }
 
 .panel {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px -1px rgba(105, 19, 142, 0.05);
+    background: var(--surface-1);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.panel h2 {
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 1.25rem;
-  color: var(--accent);
+.panel-header {
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-subtle);
 }
 
-.item-form {
+.panel-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    list-style: none;
+}
+
+.vehicle-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition: all 0.3s ease;
 }
 
-.item-form label {
+.card-body {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  gap: 16px;
+  width: 100%;
 }
 
-.item-form input,
-.item-form select {
-  padding: 10px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: var(--card);
-  color: var(--text);
+.card-header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
 }
 
-.item-form button {
-  padding: 10px 16px;
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
 }
 
-.item-form button:hover {
-  background: var(--accent-dark);
-}
-
-.item-list {
-  list-style: none;
-  padding: 0;
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  color: var(--text-primary);
 }
 
-.item-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 16px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--card);
-  transition: border-color 0.2s, box-shadow 0.2s;
+.vehicle-card:hover {
+    border-color: var(--accent-border);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
-.item-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 2px 8px rgba(105, 19, 142, 0.12);
+.card-image-wrap {
+    width: 100%;
+    height: 130px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--surface-3);
 }
 
-.item-card h3 {
-  margin: 0 0 6px 0;
-  font-size: 1.05rem;
+.vehicle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-.badge {
+.vehicle-card:hover .vehicle-img {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.badge-fuel {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 12px;
-  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.5px;
 }
 
-.badge-benzina { background: var(--badge-benzina); }
-.badge-diesel { background: var(--badge-diesel); }
-.badge-electric { background: var(--badge-electric); }
-
-.status {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--accent);
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 2px;
 }
 
-.item-card.done h3 {
-  text-decoration: line-through;
-  color: var(--muted);
+.checkbox-container input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+  cursor: pointer;
 }
 
-.item-card.done .status {
-  color: var(--muted);
+.fuel-petrol { background: rgba(245, 158, 11, 0.1); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.2); }
+.fuel-diesel { background: rgba(59, 130, 246, 0.1); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.2); }
+.fuel-electric { background: rgba(34, 197, 94, 0.1); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.2); }
+
+.task-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    flex: 1;
 }
 
-.app-footer {
-  text-align: center;
-  padding: 24px;
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-weight: 500;
+.task-main input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
 }
 
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+.btn-danger {
+  width: 100%;
+  border: 1px solid var(--rose, #F43F5E);
+  background: rgba(244, 63, 94, 0.08);
+  color: var(--rose, #F43F5E);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-@media (max-width: 700px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
+.btn-danger:hover {
+    background: var(--rose, #F43F5E);
+    color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #13091e;
-    --card: #1f122e;
-    --text: #f3e8ff;
-    --muted: #a78bfa;
-    --border: #3b1d54;
-    --accent: #a855f7;
-    --accent-dark: #9333ea;
-    --accent-soft: #2e1065;
-  }
-  
-  .app-header {
-    background: #2e1065;
-  }
+.vehicle-card.active-card {
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+:root[data-theme="light"] {
+    --deep-space: #F8FAFC;
+    --surface-1: #FFFFFF;
+    --surface-2: #F1F5F9;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --border-subtle: rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme="dark"] {
+    --deep-space: #1E1E24;
+    --surface-1: #26262D;
+    --surface-2: #2E2E36;
+    --text-primary: #EEEEF0;
+    --text-secondary: #8A8B9E;
+    --border-subtle: rgba(255, 255, 255, 0.06);
 }

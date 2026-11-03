@@ -42,3 +42,13 @@ Details per stage: see the `ai-log/` folder.
 | S2-R5 | original array unchanged after add | [vehicule.js#L75-L77](https://github.com/25Laura/Sistem-de-gestiune-parc-auto-/blob/20345d572b040468cf587ecae6aff84ee01e239b/vehicule.js#L60) | console line |
 | S2-R6 | README Stage 2 section + AI log | [README.md#L24](https://github.com/25Laura/Sistem-de-gestiune-parc-auto-/blob/main/README.md), [ai-log/etapa-02.md](https://github.com/25Laura/Sistem-de-gestiune-parc-auto-/blob/main/ai-log/etapa-02.md) | read |
 | S2-R7 | commit "Stage 2" pushed | [Commit Stage 2](https://github.com/25Laura/Sistem-de-gestiune-parc-auto-/commit/20345d572b040468cf587ecae6aff84ee01e239b#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5R30) | commit history |
+
+
+## Stage 4: components
+The list is rendered from the data, through two components:
+- VehicleList receives the whole array and renders one card per item
+- VehicleCard receives a single item through props and displays it
+
+## Status
+- [x] Stage 3: Vite and React project
+- [x] Stage 5: components rendered from data
