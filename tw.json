@@ -1,0 +1,6 @@
+{
+  "resource": "vehicule",
+  "title": "vehicleName",
+  "done": "activeFlag",
+  "sample": { "fuelType": "diesel", "an": 2019 }
+}
