@@ -1,0 +1,53 @@
+{
+  "vehicule": [
+    {
+      "id": 1,
+      "vehicleName": "Dacia Logan (B 101 ABC)",
+      "activeFlag": true,
+      "fuelType": "petrol",
+      "an": 2018
+    },
+    {
+      "id": 2,
+      "vehicleName": "Volvo FH16 (B 202 DEF)",
+      "activeFlag": false,
+      "fuelType": "diesel",
+      "an": 2015
+    },
+    {
+      "id": 3,
+      "vehicleName": "Tesla Model 3 (B 303 GHI)",
+      "activeFlag": true,
+      "fuelType": "electric",
+      "an": 2022
+    },
+    {
+      "id": 4,
+      "vehicleName": "Ford Transit (B 404 JKL)",
+      "activeFlag": true,
+      "fuelType": "diesel",
+      "an": 2019
+    },
+    {
+      "id": 5,
+      "vehicleName": "Renault Zoe (B 505 MNO)",
+      "activeFlag": false,
+      "fuelType": "electric",
+      "an": 2020
+    },
+    {
+      "id": 6,
+      "vehicleName": "Skoda Octavia (B 606 PRS)",
+      "activeFlag": true,
+      "fuelType": "petrol",
+      "an": 2021
+    },
+    {
+      "vehicleName": "Ford Focus",
+      "fuelType": "diesel",
+      "an": 2022,
+      "activeFlag": true,
+      "id": 7
+    }
+  ]
+}
