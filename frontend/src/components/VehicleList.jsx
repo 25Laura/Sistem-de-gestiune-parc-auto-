@@ -1,12 +1,17 @@
 import VehicleCard from "./VehicleCard.jsx";
+import styles from "./VehicleList.module.css";
 
-export default function TaskList({ vehicule, onToggle, onDelete }) {
-  if (!vehicule || vehicule.length === 0) {
-    return <p className="empty-message">Nu există vehicule în parc.</p>;
+export default function VehicleList({ vehicule, onToggle, onDelete }) {
+  if (vehicule.length === 0) {
+    return (
+      <p className="empty" data-testid="empty">
+        Nu exista vehicule in parc.
+      </p>
+    );
   }
 
   return (
-    <ul className="vehicle-grid">
+    <ul className={styles.grid}>
       {vehicule.map((vehicle) => (
         <VehicleCard
           key={vehicle.id}

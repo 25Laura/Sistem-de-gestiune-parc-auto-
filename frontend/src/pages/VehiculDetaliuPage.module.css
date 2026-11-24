@@ -1,0 +1,41 @@
+.detail {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 10px 20px;
+  margin-top: 16px;
+}
+
+.fields dt {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.fields dd {
+  margin: 0;
+}
+
+.activ {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.inactiv {
+  color: var(--rose);
+  font-weight: 700;
+}

@@ -1,0 +1,57 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--surface-3);
+}
+
+.mare {
+  height: 260px;
+  margin-bottom: 16px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.wrap:hover .img {
+  transform: scale(1.05);
+}
+
+.gol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
+}
+
+.credit {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 12px;
+}
+
+.credit a {
+  color: #fff;
+  text-decoration: none;
+}
